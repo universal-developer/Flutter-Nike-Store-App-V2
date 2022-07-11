@@ -1,6 +1,5 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_nike_storev2_app/colors.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
@@ -23,21 +22,30 @@ class _HomeScreenState extends State<HomeScreen> {
                 CupertinoIcons.text_alignleft,
               ),
               onPressed: () {},
-              color: blackColor,
               splashRadius: 20,
             ),
-            const Text('NIKE')
+            InkWell(
+              onTap: () => {},
+              child: const Image(
+                image: AssetImage(
+                  'assets/logo.png',
+                ),
+              ),
+            ),
+            IconButton(
+              icon: const Icon(CupertinoIcons.bell),
+              onPressed: () => {},
+              splashRadius: 20,
+            ),
           ],
         ),
       ),
-      body: Container(
-        child: const Center(
-          child: Text(
-            '👋🏻',
-            style: TextStyle(
-              fontWeight: FontWeight.bold,
-              fontSize: 30,
-            ),
+      body: const Center(
+        child: Text(
+          '👋🏻',
+          style: TextStyle(
+            fontWeight: FontWeight.bold,
+            fontSize: 30,
           ),
         ),
       ),
