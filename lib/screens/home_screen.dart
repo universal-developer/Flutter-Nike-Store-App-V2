@@ -14,31 +14,28 @@ class _HomeScreenState extends State<HomeScreen> {
     return Scaffold(
       appBar: AppBar(
         elevation: 0,
-        title: Row(
-          mainAxisAlignment: MainAxisAlignment.spaceAround,
-          children: [
-            IconButton(
-              icon: const Icon(
-                CupertinoIcons.text_alignleft,
-              ),
-              onPressed: () {},
-              splashRadius: 20,
-            ),
-            InkWell(
-              onTap: () => {},
-              child: const Image(
-                image: AssetImage(
-                  'assets/logo.png',
-                ),
-              ),
-            ),
-            IconButton(
-              icon: const Icon(CupertinoIcons.bell),
-              onPressed: () => {},
-              splashRadius: 20,
-            ),
-          ],
+        leading: IconButton(
+          icon: const Icon(
+            CupertinoIcons.text_alignleft,
+          ),
+          onPressed: () {},
+          splashRadius: 20,
         ),
+        actions: [
+          InkWell(
+            onTap: () => {},
+            child: const Image(
+              image: AssetImage(
+                'assets/logo.png',
+              ),
+            ),
+          ),
+          IconButton(
+            icon: const Icon(CupertinoIcons.bell),
+            onPressed: () => {},
+            splashRadius: 20,
+          ),
+        ],
       ),
       body: const Center(
         child: Text(
