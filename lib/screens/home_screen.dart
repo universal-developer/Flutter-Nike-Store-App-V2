@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_nike_storev2_app/components/new_release.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
@@ -21,15 +22,15 @@ class _HomeScreenState extends State<HomeScreen> {
           onPressed: () {},
           splashRadius: 20,
         ),
-        actions: [
-          InkWell(
-            onTap: () => {},
-            child: const Image(
-              image: AssetImage(
-                'assets/logo.png',
-              ),
+        title: InkWell(
+          onTap: () => {},
+          child: const Image(
+            image: AssetImage(
+              'assets/logo.png',
             ),
           ),
+        ),
+        actions: [
           IconButton(
             icon: const Icon(CupertinoIcons.bell),
             onPressed: () => {},
@@ -37,13 +38,15 @@ class _HomeScreenState extends State<HomeScreen> {
           ),
         ],
       ),
-      body: const Center(
-        child: Text(
-          '👋🏻',
-          style: TextStyle(
-            fontWeight: FontWeight.bold,
-            fontSize: 30,
-          ),
+      body: SafeArea(
+        minimum: const EdgeInsets.only(right: 15, left: 15),
+        child: Column(
+          children: const [
+            SizedBox(
+              height: 20,
+            ),
+            NewRealeaseComponent(),
+          ],
         ),
       ),
     );
