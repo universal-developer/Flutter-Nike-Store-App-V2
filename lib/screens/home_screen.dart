@@ -2,6 +2,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_nike_storev2_app/components/new_release.dart';
 import 'package:chip_list/chip_list.dart';
+import 'package:flutter_nike_storev2_app/components/swiper.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
@@ -71,6 +72,12 @@ class _HomeScreenState extends State<HomeScreen> {
                 activeBorderColorList: [Colors.black],
                 listOfChipIndicesCurrentlySeclected: [0],
               ),
+            ),
+            SizedBox(
+              height: 20,
+            ),
+            Center(
+              child: SwiperComponent(),
             ),
           ],
         ),
