@@ -1,5 +1,7 @@
+import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_nike_storev2_app/colors.dart';
 import 'package:flutter_nike_storev2_app/components/new_release.dart';
 import 'package:chip_list/chip_list.dart';
 import 'package:flutter_nike_storev2_app/components/swiper.dart';
@@ -44,42 +46,66 @@ class _HomeScreenState extends State<HomeScreen> {
           ),
         ],
       ),
-      body: SafeArea(
-        minimum: const EdgeInsets.only(right: 15, left: 15),
-        child: Column(
-          children: const [
-            SizedBox(
-              height: 20,
-            ),
-            NewRealeaseComponent(),
-            SizedBox(
-              height: 20,
-            ),
-            SizedBox(
-              width: 350,
-              child: ChipList(
-                listOfChipNames: [
-                  'Popular',
-                  'Men',
-                  'Women',
-                  'Kids',
-                  'New Release'
-                ],
-                activeBgColorList: [Colors.black],
-                inactiveBgColorList: [Colors.white],
-                activeTextColorList: [Colors.white],
-                inactiveTextColorList: [Colors.black],
-                activeBorderColorList: [Colors.black],
-                listOfChipIndicesCurrentlySeclected: [0],
+      body: SingleChildScrollView(
+        child: SafeArea(
+          minimum: const EdgeInsets.only(right: 15, left: 15),
+          child: Column(
+            children: [
+              const SizedBox(
+                height: 20,
               ),
-            ),
-            SizedBox(
-              height: 50,
-            ),
-            Center(
-              child: SwiperComponent(),
-            ),
-          ],
+              const NewRealeaseComponent(),
+              const SizedBox(
+                height: 20,
+              ),
+              const SizedBox(
+                width: 350,
+                child: ChipList(
+                  listOfChipNames: [
+                    'Popular',
+                    'Men',
+                    'Women',
+                    'Kids',
+                    'New Release'
+                  ],
+                  activeBgColorList: [Colors.black],
+                  inactiveBgColorList: [Colors.white],
+                  activeTextColorList: [Colors.white],
+                  inactiveTextColorList: [Colors.black],
+                  activeBorderColorList: [Colors.black],
+                  listOfChipIndicesCurrentlySeclected: [0],
+                ),
+              ),
+              SizedBox(
+                height: 390,
+                child: CarouselSlider(
+                  options: CarouselOptions(
+                    autoPlay: false,
+                  ),
+                  items: [
+                    SwiperComponent(
+                        name: 'Air Max Shoe 270',
+                        category: "Men's shoe",
+                        price: '\$180',
+                        color: blueColor,
+                        image: 'assets/shoe_1.png'),
+                    SwiperComponent(
+                        name: 'Air Max Shoe 1000',
+                        category: "Men's shoe",
+                        price: '\$580',
+                        color: purpleColor,
+                        image: 'assets/shoe_1.png'),
+                    SwiperComponent(
+                        name: 'Air Max Shoe 590',
+                        category: "Men's shoe",
+                        price: '\$380',
+                        color: pinkColor,
+                        image: 'assets/shoe_1.png'),
+                  ],
+                ),
+              ),
+            ],
+          ),
         ),
       ),
     );

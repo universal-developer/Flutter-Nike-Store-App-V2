@@ -2,21 +2,30 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_nike_storev2_app/colors.dart';
 
-class SwiperComponent extends StatefulWidget {
-  const SwiperComponent({super.key});
+class SwiperComponent extends StatelessWidget {
+  /*String name;
+  String category;
+  String price;
+  String color;
+  String image;*/
+  String name, category, price, image;
+  Color color;
 
-  @override
-  State<SwiperComponent> createState() => _SwiperComponentState();
-}
+  SwiperComponent({
+    required this.name,
+    required this.category,
+    required this.price,
+    required this.color,
+    required this.image,
+  });
 
-class _SwiperComponentState extends State<SwiperComponent> {
   @override
   Widget build(BuildContext context) {
     return Container(
       height: 250,
       width: 250,
       decoration: BoxDecoration(
-        color: blueColor,
+        color: color,
         borderRadius: BorderRadius.circular(20),
       ),
       child: Stack(
@@ -25,11 +34,11 @@ class _SwiperComponentState extends State<SwiperComponent> {
         textDirection: TextDirection.rtl,
         fit: StackFit.loose,
         children: [
-          const Positioned(
+          Positioned(
             bottom: 70,
             right: -20,
             child: Image(
-              image: AssetImage('assets/shoe_1.png'),
+              image: AssetImage(image),
               width: 300,
             ),
           ),
@@ -45,34 +54,34 @@ class _SwiperComponentState extends State<SwiperComponent> {
               onPressed: () => {},
             ),
           ),
-          const Positioned(
+          Positioned(
             left: 10,
             bottom: 70,
             child: Text(
-              'Nike Air Max 270',
-              style: TextStyle(
+              name,
+              style: const TextStyle(
                 fontWeight: FontWeight.bold,
                 fontSize: 20,
               ),
             ),
           ),
-          const Positioned(
+          Positioned(
             left: 10,
             bottom: 50,
             child: Text(
-              "Men's shoe",
-              style: TextStyle(
+              category,
+              style: const TextStyle(
                 fontWeight: FontWeight.w500,
                 fontSize: 18,
               ),
             ),
           ),
-          const Positioned(
+          Positioned(
             left: 10,
             bottom: 15,
             child: Text(
-              "\$180",
-              style: TextStyle(
+              price,
+              style: const TextStyle(
                 fontWeight: FontWeight.w900,
                 fontSize: 20,
               ),
