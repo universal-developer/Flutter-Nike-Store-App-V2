@@ -32,7 +32,9 @@ class _HomeScreenState extends State<HomeScreen> {
         ),
         actions: [
           IconButton(
-            icon: const Icon(CupertinoIcons.bell),
+            icon: const Icon(
+              CupertinoIcons.bell,
+            ),
             onPressed: () => {},
             splashRadius: 20,
           ),
@@ -46,6 +48,9 @@ class _HomeScreenState extends State<HomeScreen> {
               height: 20,
             ),
             NewRealeaseComponent(),
+            SizedBox(
+              height: 20,
+            ),
           ],
         ),
       ),
