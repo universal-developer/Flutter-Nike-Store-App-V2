@@ -74,7 +74,7 @@ class _HomeScreenState extends State<HomeScreen> {
               ),
             ),
             SizedBox(
-              height: 20,
+              height: 50,
             ),
             Center(
               child: SwiperComponent(),
