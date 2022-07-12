@@ -1,6 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_nike_storev2_app/components/new_release.dart';
+import 'package:chip_list/chip_list.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
@@ -10,6 +11,8 @@ class HomeScreen extends StatefulWidget {
 }
 
 class _HomeScreenState extends State<HomeScreen> {
+  final int _currentIndex = 0;
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -50,6 +53,24 @@ class _HomeScreenState extends State<HomeScreen> {
             NewRealeaseComponent(),
             SizedBox(
               height: 20,
+            ),
+            SizedBox(
+              width: 350,
+              child: ChipList(
+                listOfChipNames: [
+                  'Popular',
+                  'Men',
+                  'Women',
+                  'Kids',
+                  'New Release'
+                ],
+                activeBgColorList: [Colors.black],
+                inactiveBgColorList: [Colors.white],
+                activeTextColorList: [Colors.white],
+                inactiveTextColorList: [Colors.black],
+                activeBorderColorList: [Colors.black],
+                listOfChipIndicesCurrentlySeclected: [0],
+              ),
             ),
           ],
         ),
