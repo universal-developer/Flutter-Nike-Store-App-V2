@@ -1,14 +1,9 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_nike_storev2_app/colors.dart';
 
-class BottomNavBar extends StatefulWidget {
-  const BottomNavBar({super.key});
-
-  @override
-  State<BottomNavBar> createState() => const _BottomNavBarState();
-}
-
-class _BottomNavBarState extends State<BottomNavBar> {
-  const BottomNavBar({Key? key}) : super(key: key);
+class BottomNavBarFb2 extends StatelessWidget {
+  const BottomNavBarFb2({Key? key}) : super(key: key);
 
   final primaryColor = const Color(0xff4338CA);
   final secondaryColor = const Color(0xff6D28D9);
@@ -21,24 +16,25 @@ class _BottomNavBarState extends State<BottomNavBar> {
     return BottomAppBar(
       color: backgroundColor,
       child: SizedBox(
-        height: 56,
+        height: 66,
         width: MediaQuery.of(context).size.width,
         child: Padding(
-          padding: const EdgeInsets.only(left: 25.0, right: 25.0),
+          padding: const EdgeInsets.only(left: 25.0, right: 25.0, top: 10),
           child: Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
-              IconBottomBar(icon: Icons.home, selected: true, onPressed: () {}),
               IconBottomBar(
-                  icon: Icons.search_outlined,
+                  icon: CupertinoIcons.home, selected: true, onPressed: () {}),
+              IconBottomBar(
+                  icon: CupertinoIcons.bag_fill,
                   selected: false,
                   onPressed: () {}),
               IconBottomBar(
-                  icon: Icons.local_grocery_store_outlined,
+                  icon: CupertinoIcons.heart_fill,
                   selected: false,
                   onPressed: () {}),
               IconBottomBar(
-                  icon: Icons.date_range_outlined,
+                  icon: CupertinoIcons.settings,
                   selected: false,
                   onPressed: () {})
             ],
@@ -50,7 +46,7 @@ class _BottomNavBarState extends State<BottomNavBar> {
 }
 
 class IconBottomBar extends StatelessWidget {
-  const IconBottomBar(
+  IconBottomBar(
       {Key? key,
       required this.icon,
       required this.selected,
@@ -61,7 +57,7 @@ class IconBottomBar extends StatelessWidget {
   final bool selected;
   final Function() onPressed;
 
-  final primaryColor = orangeColor;
+  final primaryColor = whiteColor;
 
   @override
   Widget build(BuildContext context) {

@@ -1,16 +1,27 @@
-# flutter_nike_storev2_app
+<h1>Flutter Nike Store App V2</h1>
 
-A new Flutter project.
+<h2>Screens: </h2>
 
-## Getting Started
+<p align="center"><img src="assets/git/1.png" height="350px"/>
 
-This project is a starting point for a Flutter application.
+<h2>Usage: </h2>
 
-A few resources to get you started if this is your first Flutter project:
+```bash
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+git clone https://github.com/universal-developer/Flutter-Nike-Store-App-V2
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+cd Flutter-Nike-Store-App-V2
+
+flutter pub get
+
+flutter run
+
+```
+
+<h2>Link on template: </h2>
+
+```bash
+
+https://www.figma.com/file/QAC5avGziDWuiCqL9ZPvG8/Nike-Shoes-App-Ui-(Community)?node-id=0%3A1
+
+```

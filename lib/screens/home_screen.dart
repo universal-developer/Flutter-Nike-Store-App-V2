@@ -2,6 +2,7 @@ import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_nike_storev2_app/colors.dart';
+import 'package:flutter_nike_storev2_app/components/bottom_nav_bar.dart';
 import 'package:flutter_nike_storev2_app/components/new_release.dart';
 import 'package:chip_list/chip_list.dart';
 import 'package:flutter_nike_storev2_app/components/swiper.dart';
@@ -19,6 +20,7 @@ class _HomeScreenState extends State<HomeScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      extendBody: true,
       appBar: AppBar(
         elevation: 0,
         leading: IconButton(
@@ -108,6 +110,7 @@ class _HomeScreenState extends State<HomeScreen> {
           ),
         ),
       ),
+      bottomNavigationBar: const BottomNavBarFb2(),
     );
   }
 }
