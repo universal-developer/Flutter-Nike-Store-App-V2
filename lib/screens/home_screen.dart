@@ -6,6 +6,7 @@ import 'package:flutter_nike_storev2_app/components/bottom_nav_bar.dart';
 import 'package:flutter_nike_storev2_app/components/new_release.dart';
 import 'package:chip_list/chip_list.dart';
 import 'package:flutter_nike_storev2_app/components/swiper.dart';
+import 'package:fluentui_system_icons/fluentui_system_icons.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
@@ -25,7 +26,7 @@ class _HomeScreenState extends State<HomeScreen> {
         elevation: 0,
         leading: IconButton(
           icon: const Icon(
-            CupertinoIcons.text_alignleft,
+            FluentIcons.text_align_left_16_filled,
           ),
           onPressed: () {},
           splashRadius: 20,

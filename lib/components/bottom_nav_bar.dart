@@ -1,6 +1,6 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_nike_storev2_app/colors.dart';
+import 'package:fluentui_system_icons/fluentui_system_icons.dart';
 
 class BottomNavBarFb2 extends StatelessWidget {
   const BottomNavBarFb2({Key? key}) : super(key: key);
@@ -24,17 +24,19 @@ class BottomNavBarFb2 extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
               IconBottomBar(
-                  icon: CupertinoIcons.home, selected: true, onPressed: () {}),
+                  icon: FluentIcons.home_16_filled,
+                  selected: true,
+                  onPressed: () {}),
               IconBottomBar(
-                  icon: CupertinoIcons.bag_fill,
+                  icon: FluentIcons.backpack_12_filled,
                   selected: false,
                   onPressed: () {}),
               IconBottomBar(
-                  icon: CupertinoIcons.heart_fill,
+                  icon: FluentIcons.heart_28_filled,
                   selected: false,
                   onPressed: () {}),
               IconBottomBar(
-                  icon: CupertinoIcons.settings,
+                  icon: FluentIcons.settings_28_filled,
                   selected: false,
                   onPressed: () {})
             ],
